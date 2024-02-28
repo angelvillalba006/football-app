@@ -1,15 +1,24 @@
 import * as React from "react";
 import { BottomNavigation } from "react-native-paper";
-import FontAwesome from "react-native-vector-icons/FontAwesome6";
+import { Image, StyleSheet, Text, View } from "react-native";
 import ExamplePage from "../screens/organisms/ExamplePage";
 import NavigationContext from "../services/navigationContext";
 
 const NavBar = () => {
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
-    { key: "example1", icon: "house" },
-    { key: "example2", icon: "house" },
-    { key: "example3", icon: "house" },
+    {
+      key: "example1",
+      icon: require("../../assets/icons/field.png"),
+    },
+    {
+      key: "example2",
+      icon: require("../../assets/icons/field.png"),
+    },
+    {
+      key: "example3",
+      icon: require("../../assets/icons/field.png"),
+    },
   ]);
 
   // Define the renderScene function to map the routes to their respective components
@@ -19,9 +28,11 @@ const NavBar = () => {
     example3: ExamplePage,
   });
 
-  // Define the renderIcon function to render the icon for the Home and Example routes
+  // Define the renderIcon function to render the icon and label for the routes
   const renderIcon = ({ route, color }: { route: any; color: string }) => (
-    <FontAwesome name={route.icon} size={24} color={color} />
+    <View style={styles.iconContainer}>
+      <Image source={route.icon} style={[styles.icon, { tintColor: color }]} />
+    </View>
   );
 
   return (
@@ -33,11 +44,27 @@ const NavBar = () => {
         renderScene={renderScene}
         renderIcon={renderIcon}
         inactiveColor="#000"
-        barStyle={{ backgroundColor: "#D9D9D9", height: 55 }}
+        barStyle={{
+          backgroundColor: "#D9D9D9",
+          height: 55,
+        }}
         theme={{ colors: { secondaryContainer: "#FFB35A" } }}
       />
     </NavigationContext.Provider>
   );
 };
+
+const styles = StyleSheet.create({
+  iconContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  icon: {
+    width: 30,
+    height: 30,
+    marginBottom: 3,
+  },
+});
 
 export default NavBar;
