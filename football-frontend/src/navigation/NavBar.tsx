@@ -1,29 +1,30 @@
 import * as React from "react";
 import { BottomNavigation } from "react-native-paper";
 import { Image, StyleSheet, Text, View } from "react-native";
-import ExamplePage from "../screens/organisms/ExamplePage";
 import NavigationContext from "../services/navigationContext";
+import ExamplePage from "../screens/organisms/ExamplePage";
+import MatchesPage from "../screens/organisms/MatchesPage";
 
 const NavBar = () => {
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
     {
-      key: "example1",
-      icon: require("../../assets/icons/field.png"),
+      key: "matches",
+      icon: require("../../assets/icons/navigation/field.png"),
     },
     {
       key: "example2",
-      icon: require("../../assets/icons/field.png"),
+      icon: require("../../assets/icons/navigation/field.png"),
     },
     {
       key: "example3",
-      icon: require("../../assets/icons/field.png"),
+      icon: require("../../assets/icons/navigation/field.png"),
     },
   ]);
 
   // Define the renderScene function to map the routes to their respective components
   const renderScene = BottomNavigation.SceneMap({
-    example1: ExamplePage,
+    matches: MatchesPage,
     example2: ExamplePage,
     example3: ExamplePage,
   });
