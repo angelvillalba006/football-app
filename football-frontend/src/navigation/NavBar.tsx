@@ -2,8 +2,8 @@ import * as React from "react";
 import { BottomNavigation } from "react-native-paper";
 import { Image, StyleSheet, Text, View } from "react-native";
 import NavigationContext from "../services/navigationContext";
-import ExamplePage from "../screens/organisms/ExamplePage";
-import MatchesPage from "../screens/organisms/MatchesPage";
+import ExamplePage from "../screens/ExamplePage";
+import MatchesPage from "../screens/MatchesPage";
 
 const NavBar = () => {
   const [index, setIndex] = React.useState(0);
@@ -49,7 +49,7 @@ const NavBar = () => {
           backgroundColor: "#D9D9D9",
           height: 55,
         }}
-        theme={{ colors: { secondaryContainer: "#FFB35A" } }}
+        theme={{ colors: { secondaryContainer: "#ff2c84" } }}
       />
     </NavigationContext.Provider>
   );

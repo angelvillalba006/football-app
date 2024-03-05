@@ -1,8 +1,8 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import PageHeader from "../../components/molecules/matches/PageHeader";
-import Leagues from "../../components/molecules/matches/Leagues";
-import ListSubheader from "react-native-paper/lib/typescript/components/List/ListSubheader";
+import PageHeader from "../components/molecules/matches/PageHeader";
+import Leagues from "../components/molecules/matches/Leagues";
+import LiveMatches from "../components/organisms/LiveMatches";
 const MatchesPage = () => {
   const avatarUrl = {
     uri: "https://zethafiranty.files.wordpress.com/2012/12/fc-barcelona-logo-wallpaper.jpg",
@@ -16,21 +16,16 @@ const MatchesPage = () => {
         pageTitle="Matches"
       />
       <Leagues />
+      <LiveMatches />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: "row",
-    alignItems: "center",
+    flex: 1,
     justifyContent: "flex-start",
-  },
-  text: {
-    fontSize: 18,
-    fontWeight: "bold",
-    color: "blue",
-    marginLeft: 10,
+    backgroundColor: "#f8f4f4",
   },
 });
 

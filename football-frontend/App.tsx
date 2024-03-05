@@ -7,9 +7,9 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { ActivityIndicator } from "react-native-paper";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import NavBar from "./src/navigation/NavBar";
-import ExamplePage from "./src/screens/organisms/ExamplePage";
-import Onboarding from "./src/screens/organisms/OnboardingPage";
-import MatchesPage from "./src/screens/organisms/MatchesPage";
+import ExamplePage from "./src/screens/ExamplePage";
+import Onboarding from "./src/screens/OnboardingPage";
+import MatchesPage from "./src/screens/MatchesPage";
 
 const Stack = createStackNavigator();
 
@@ -56,14 +56,16 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <NavigationContainer>
-        <View style={{ flex: 1 }}>
+        <View style={{ flex: 1, backgroundColor: "black" }}>
           <StatusBar style="auto" />
           {loading ? (
             <Loading />
           ) : (
             <Stack.Navigator
               initialRouteName={initialRoute}
-              screenOptions={{ headerShown: false }}
+              screenOptions={{
+                headerShown: false,
+              }}
             >
               {/* Screens */}
               <Stack.Screen name="Onboarding" component={Onboarding} />

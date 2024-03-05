@@ -33,8 +33,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    position: "absolute",
-    top: 0,
+    position: "relative",
+    top: "4%",
   },
   avatarContainer: {
     position: "absolute",

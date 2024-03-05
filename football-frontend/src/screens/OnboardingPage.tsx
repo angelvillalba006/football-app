@@ -1,10 +1,10 @@
 import React, { useState, useRef } from "react";
 import { View, FlatList, StyleSheet, Animated } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import onboardingData from "../../data/json/onboardingSlides";
-import OnboardingSlide from "../../components/molecules/onboarding/Slide";
-import Paginator from "../../components/molecules/onboarding/Paginator";
-import NextButton from "../../components/atoms/onboarding/Button";
+import onboardingData from "../data/json/onboardingSlides";
+import OnboardingSlide from "../components/molecules/onboarding/Slide";
+import Paginator from "../components/molecules/onboarding/Paginator";
+import NextButton from "../components/atoms/onboarding/Button";
 import { useNavigation } from "@react-navigation/native";
 interface OnboardingItem {
   id: string;
