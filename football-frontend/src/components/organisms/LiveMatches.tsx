@@ -1,9 +1,9 @@
 import React from "react";
 import { View } from "react-native";
 import SectionTitle from "../atoms/shared/SectionTitle";
-import LiveMatch from "../molecules/matches/LiveMatch";
+import LiveMatch from "../molecules/matches/LiveMatchCard";
 
-const Leagues = () => {
+const LiveMatches = () => {
   return (
     <View>
       <SectionTitle title="Live Matches" />
@@ -12,4 +12,4 @@ const Leagues = () => {
   );
 };
 
-export default Leagues;
+export default LiveMatches;
