@@ -1,7 +1,7 @@
 import React from "react";
 import { View } from "react-native";
-import SectionTitle from "../atoms/shared/SectionTitle";
-import LiveMatch from "../molecules/matches/LiveMatchCard";
+import SectionTitle from "../../atoms/shared/SectionTitle";
+import LiveMatch from "../../molecules/matches/LiveMatchCard";
 
 const LiveMatches = () => {
   return (

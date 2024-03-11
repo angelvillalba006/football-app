@@ -1,8 +1,10 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, ScrollView } from "react-native";
 import PageHeader from "../components/molecules/matches/PageHeader";
 import Leagues from "../components/molecules/matches/Leagues";
-import LiveMatches from "../components/organisms/LiveMatches";
+import LiveMatches from "../components/organisms/matches/LiveMatches";
+import NextMatches from "../components/organisms/matches/NextMatchesList";
+
 const MatchesPage = () => {
   const avatarUrl = {
     uri: "https://zethafiranty.files.wordpress.com/2012/12/fc-barcelona-logo-wallpaper.jpg",
@@ -15,8 +17,12 @@ const MatchesPage = () => {
         avatarSource={avatarUrl.uri}
         pageTitle="Matches"
       />
-      <Leagues />
-      <LiveMatches />
+
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <Leagues />
+        <LiveMatches />
+        <NextMatches />
+      </ScrollView>
     </View>
   );
 };
