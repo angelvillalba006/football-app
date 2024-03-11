@@ -1,0 +1,15 @@
+# .gitignore für Node.js-Projekte
+
+# Ausschließen des node_modules-Verzeichnisses
+node_modules/
+
+# Log-Dateien
+logs
+*.log
+
+# Lokale Konfigurationsdateien
+.env
+
+# Dependency-Dateien
+package-lock.json
+yarn.lock
