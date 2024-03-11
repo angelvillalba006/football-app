@@ -1,59 +1,72 @@
 import React from "react";
-import { View, StyleSheet, ScrollView } from "react-native";
+import {
+  View,
+  StyleSheet,
+  ScrollView,
+  ImageSourcePropType,
+} from "react-native";
 import CardBackground from "../../atoms/matches/CardBackground";
 import Matchday from "../../atoms/matches/Matchday";
 import LeagueName from "../../atoms/matches/LeagueName";
 import GameResult from "../../atoms/matches/GameResult";
 import Team from "./Team";
 
-const LiveMatchCard = () => {
-  const numberOfCards: number = 3; // Anzahl der Karten
+interface LiveMatchesCardProps {
+  matchday: number;
+  leagueName: string;
+  minutesPlayed: string;
+  homeTeam: {
+    name: string;
+    logo: ImageSourcePropType;
+    type: "Home" | "Away";
+    score: number;
+  };
+  awayTeam: {
+    name: string;
+    logo: ImageSourcePropType;
+    type: "Home" | "Away";
+    score: number;
+  };
+}
 
+const LiveMatchCard = ({
+  matchday,
+  leagueName,
+  homeTeam,
+  awayTeam,
+  minutesPlayed,
+}: LiveMatchesCardProps) => {
   return (
-    <ScrollView
-      contentContainerStyle={styles.container}
-      horizontal
-      showsHorizontalScrollIndicator={false}
-    >
-      {[...Array(numberOfCards)].map((_, index) => (
-        <View
-          key={index}
-          style={[
-            styles.card,
-            index === 0 && numberOfCards === 1 ? { marginLeft: 0 } : null,
-          ]}
-        >
-          <CardBackground />
+    <View style={styles.card}>
+      <CardBackground />
 
-          <View style={styles.overlay}>
-            <Matchday matchday={27} />
-            <LeagueName league="Premier League" />
+      <View style={styles.overlay}>
+        <Matchday matchday={matchday} />
+        <LeagueName league={leagueName} />
 
-            <View style={styles.gameDetails}>
-              <Team
-                name="Newcastle"
-                source={require("../../../../assets/logos/clubs/premierleague/newcastle.png")}
-                type="Home"
-              />
-              <GameResult hometeam={2} awayteam={1} minutesPlayed="83+15" />
-              <Team
-                name="Man City"
-                source={require("../../../../assets/logos/clubs/premierleague/manchestercity.png")}
-                type="Away"
-              />
-            </View>
-          </View>
+        <View style={styles.gameDetails}>
+          <Team
+            name={homeTeam.name}
+            source={homeTeam.logo}
+            type={homeTeam.type}
+          />
+          <GameResult
+            hometeam={homeTeam.score}
+            awayteam={awayTeam.score}
+            minutesPlayed={minutesPlayed}
+          />
+          <Team
+            name={awayTeam.name}
+            source={awayTeam.logo}
+            type={awayTeam.type}
+          />
         </View>
-      ))}
-    </ScrollView>
+      </View>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flexGrow: 1,
-    justifyContent: "center",
-  },
   card: {
     backgroundColor: "#38043c",
     width: 300,
@@ -70,7 +83,7 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop: 20,
     flexDirection: "row",
-    justifyContent: "center", // Änderung der Ausrichtung zu space-between
+    justifyContent: "center",
   },
 });
 
