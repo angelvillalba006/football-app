@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import { fetchNextMatches } from "./api/leagues/matchday.js";
+import fetchCurrentMatchday from "./api/leagues/matchday.js";
 
 const app = express();
 const port = 3000;
@@ -26,14 +26,11 @@ app.get("/", (req, res) => {
 });
 
 // Endpoint for fetching the next matches of a league
-app.get("/matchday/:league", async (req, res) => {
-  const league = req.params.league;
-
+app.get("/matchday", async (req, res) => {
   try {
-    const matchdaySchedule = await fetchCurrentMatchdaySchedule(league);
-    res.json(matchdaySchedule);
+    const matchdayNumber = await fetchCurrentMatchday();
+    res.json({ matchday: matchdayNumber });
   } catch (error) {
-    console.error(error);
     res.status(500).send("Fehler beim Abrufen des aktuellen Spieltags.");
   }
 });
