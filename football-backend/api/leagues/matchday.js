@@ -64,6 +64,10 @@ const scrapeMatchday = async () => {
               .text()
               .trim() || "Not available";
 
+          // Check if the match has been played by checking if both scores are present
+          const played =
+            homeScore !== "-" && awayScore !== "-" && time === "Not available";
+
           const match = {
             date,
             homeTeam: {
@@ -77,6 +81,7 @@ const scrapeMatchday = async () => {
               score: awayScore,
             },
             time,
+            played,
           };
 
           matchesData.push(match);
@@ -84,7 +89,7 @@ const scrapeMatchday = async () => {
     });
     return matchesData;
   } catch (message) {
-    return console.error(message);
+    console.error(message);
   }
 };
 
