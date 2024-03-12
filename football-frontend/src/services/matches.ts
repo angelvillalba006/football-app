@@ -3,6 +3,7 @@ import baseUrl from "./config/BASE_URL";
 
 const BASE_URL = baseUrl;
 interface MatchDayResponse {
+  filter(arg0: (match: any) => boolean): unknown;
   status: boolean;
   message: string;
   data: {
@@ -25,7 +26,7 @@ interface MatchDayResponse {
 }
 
 const MatchdayService = {
-  get: async (league: string): Promise<MatchDayResponse> => {
+  getByLeague: async (league: string): Promise<MatchDayResponse> => {
     const response = await axios.get(`${BASE_URL}/matchday/${league}`);
     return response.data;
   },
