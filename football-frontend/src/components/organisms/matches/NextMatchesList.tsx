@@ -11,7 +11,7 @@ const NextMatchesList = () => {
   useEffect(() => {
     const fetchMatches = async () => {
       try {
-        const response = await MatchdayService.getByLeague("premierleague");
+        const response = await MatchdayService.getByLeague("premier-league");
 
         const upcomingMatches = response.filter((match) => !match.played);
         setMatches(upcomingMatches as any[]);

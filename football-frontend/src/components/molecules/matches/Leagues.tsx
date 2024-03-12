@@ -40,8 +40,8 @@ const Leagues = () => {
         />
         <Button
           mode="contained"
-          text="League 1"
-          icon={require("../../../../assets/icons/leagues/league1.png")}
+          text="Ligue 1"
+          icon={require("../../../../assets/icons/leagues/ligue1.png")}
           contentStyle={{ marginHorizontal: 5 }}
           onPress={() => console.log("League 1")}
         />
