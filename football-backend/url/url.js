@@ -1,7 +1,7 @@
 const urls = {
   matchdays: {
     premierleague:
-      " https://www.sport1.de/daten/internationaler-fussball/premier-league/spielplan",
+      "https://www.eurosport.de/fussball/premier-league/zeitplan-kalender-ergebnisse.shtml",
   },
   leagues: {
     premiereleague: "https://example.com",
