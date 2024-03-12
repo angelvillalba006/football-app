@@ -35,11 +35,13 @@ const scrapeMatchday = async (league) => {
             .first()
             .text()
             .trim();
+          let homeTeamLogo = $(matchDiv);
           let homeTeamLogo = $(matchDiv)
             .find(
               'div[data-testid="team-match-score-atom-container-team-home-content-box"] picture img'
             )
             .attr("src");
+          let awayTeamLogo = $(matchDiv);
           let awayTeamLogo = $(matchDiv)
             .find(
               'div[data-testid="team-match-score-atom-container-team-away-content-box"] picture img'
