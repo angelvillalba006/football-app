@@ -7,9 +7,9 @@ interface MatchDayResponse {
   status: boolean;
   message: string;
   data: {
-    matchday: string; // or number, depending on how you store it
     matches: Array<{
       date: string;
+      time: string;
       homeTeam: {
         name: string;
         logo: string;
@@ -20,7 +20,6 @@ interface MatchDayResponse {
         logo: string;
         score: string;
       };
-      time: string;
     }>;
   };
 }
