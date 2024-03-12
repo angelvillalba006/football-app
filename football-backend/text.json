@@ -1,144 +1,152 @@
-{
-  "matchday": [
-    {
-      "date": "09/03/2024",
-      "homeTeam": {
-        "name": "Manchester United",
-        "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4080.png",
-        "score": "2"
-      },
-      "awayTeam": {
-        "name": "FC Everton",
-        "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4047.png",
-        "score": "0"
-      },
-      "time": "Not available"
+[
+  {
+    "date": "09/03/2024",
+    "homeTeam": {
+      "name": "Manchester United",
+      "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4080.png",
+      "score": "2"
     },
-    {
-      "date": "09/03/2024",
-      "homeTeam": {
-        "name": "Bournemouth",
-        "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/102706.png",
-        "score": "2"
-      },
-      "awayTeam": {
-        "name": "Sheffield United",
-        "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/100046.png",
-        "score": "2"
-      },
-      "time": "Not available"
+    "awayTeam": {
+      "name": "FC Everton",
+      "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4047.png",
+      "score": "0"
     },
-    {
-      "date": "09/03/2024",
-      "homeTeam": {
-        "name": "Wolverhampton Wanderers",
-        "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4211.png",
-        "score": "2"
-      },
-      "awayTeam": {
-        "name": "FC Fulham",
-        "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/102785.png",
-        "score": "1"
-      },
-      "time": "Not available"
+    "time": "Not available",
+    "played": true
+  },
+  {
+    "date": "09/03/2024",
+    "homeTeam": {
+      "name": "Bournemouth",
+      "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/102706.png",
+      "score": "2"
     },
-    {
-      "date": "09/03/2024",
-      "homeTeam": {
-        "name": "Crystal Palace London",
-        "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/100094.png",
-        "score": "1"
-      },
-      "awayTeam": {
-        "name": "Luton Town",
-        "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4078.png",
-        "score": "1"
-      },
-      "time": "Not available"
+    "awayTeam": {
+      "name": "Sheffield United",
+      "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/100046.png",
+      "score": "2"
     },
-    {
-      "date": "09/03/2024",
-      "homeTeam": {
-        "name": "FC Arsenal",
-        "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4007.png",
-        "score": "2"
-      },
-      "awayTeam": {
-        "name": "Brentford",
-        "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/100082.png",
-        "score": "1"
-      },
-      "time": "Not available"
+    "time": "Not available",
+    "played": true
+  },
+  {
+    "date": "09/03/2024",
+    "homeTeam": {
+      "name": "Wolverhampton Wanderers",
+      "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4211.png",
+      "score": "2"
     },
-    {
-      "date": "10/03/2024",
-      "homeTeam": {
-        "name": "Aston Villa",
-        "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4010.png",
-        "score": "0"
-      },
-      "awayTeam": {
-        "name": "Tottenham Hotspur",
-        "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4129.png",
-        "score": "4"
-      },
-      "time": "Not available"
+    "awayTeam": {
+      "name": "FC Fulham",
+      "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/102785.png",
+      "score": "1"
     },
-    {
-      "date": "10/03/2024",
-      "homeTeam": {
-        "name": "Brighton & Hove Albion",
-        "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/100050.png",
-        "score": "1"
-      },
-      "awayTeam": {
-        "name": "Nottingham Forest",
-        "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4088.png",
-        "score": "0"
-      },
-      "time": "Not available"
+    "time": "Not available",
+    "played": true
+  },
+  {
+    "date": "09/03/2024",
+    "homeTeam": {
+      "name": "Crystal Palace London",
+      "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/100094.png",
+      "score": "1"
     },
-    {
-      "date": "10/03/2024",
-      "homeTeam": {
-        "name": "West Ham United",
-        "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4144.png",
-        "score": "2"
-      },
-      "awayTeam": {
-        "name": "Burnley",
-        "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4486.png",
-        "score": "2"
-      },
-      "time": "Not available"
+    "awayTeam": {
+      "name": "Luton Town",
+      "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4078.png",
+      "score": "1"
     },
-    {
-      "date": "10/03/2024",
-      "homeTeam": {
-        "name": "FC Liverpool",
-        "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4075.png",
-        "score": "1"
-      },
-      "awayTeam": {
-        "name": "Manchester City",
-        "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4222.png",
-        "score": "1"
-      },
-      "time": "Not available"
+    "time": "Not available",
+    "played": true
+  },
+  {
+    "date": "09/03/2024",
+    "homeTeam": {
+      "name": "FC Arsenal",
+      "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4007.png",
+      "score": "2"
     },
-    {
-      "date": "11/03/2024",
-      "homeTeam": {
-        "name": "FC Chelsea",
-        "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4034.png",
-        "score": "-"
-      },
-      "awayTeam": {
-        "name": "Newcastle United",
-        "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4087.png",
-        "score": "-"
-      },
-      "time": "21:00"
-    }
-  ]
-}
+    "awayTeam": {
+      "name": "Brentford",
+      "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/100082.png",
+      "score": "1"
+    },
+    "time": "Not available",
+    "played": true
+  },
+  {
+    "date": "10/03/2024",
+    "homeTeam": {
+      "name": "Aston Villa",
+      "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4010.png",
+      "score": "0"
+    },
+    "awayTeam": {
+      "name": "Tottenham Hotspur",
+      "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4129.png",
+      "score": "4"
+    },
+    "time": "Not available",
+    "played": true
+  },
+  {
+    "date": "10/03/2024",
+    "homeTeam": {
+      "name": "Brighton & Hove Albion",
+      "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/100050.png",
+      "score": "1"
+    },
+    "awayTeam": {
+      "name": "Nottingham Forest",
+      "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4088.png",
+      "score": "0"
+    },
+    "time": "Not available",
+    "played": true
+  },
+  {
+    "date": "10/03/2024",
+    "homeTeam": {
+      "name": "West Ham United",
+      "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4144.png",
+      "score": "2"
+    },
+    "awayTeam": {
+      "name": "Burnley",
+      "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4486.png",
+      "score": "2"
+    },
+    "time": "Not available",
+    "played": true
+  },
+  {
+    "date": "10/03/2024",
+    "homeTeam": {
+      "name": "FC Liverpool",
+      "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4075.png",
+      "score": "1"
+    },
+    "awayTeam": {
+      "name": "Manchester City",
+      "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4222.png",
+      "score": "1"
+    },
+    "time": "Not available",
+    "played": true
+  },
+  {
+    "date": "11/03/2024",
+    "homeTeam": {
+      "name": "FC Chelsea",
+      "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4034.png",
+      "score": "-"
+    },
+    "awayTeam": {
+      "name": "Newcastle United",
+      "logo": "https://imgresizer.eurosport.com/unsafe/30x0/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4087.png",
+      "score": "-"
+    },
+    "time": "21:00",
+    "played": false
+  }
+]
