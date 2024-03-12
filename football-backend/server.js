@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
-import fetchCurrentMatchday from "./api/leagues/matchday.js";
+import getMatches from "./api/leagues/matches.js";
+import getMatchDays from "./api/leagues/matchday.js";
 
 const app = express();
 const port = 3000;
@@ -27,10 +28,10 @@ app.get("/", (req, res) => {
 
 // Endpoint for fetching the current matchday of a specific league
 // Now expects a league parameter in the URL
-app.get("/matchday/:league", async (req, res) => {
+app.get("/matches/:league", async (req, res) => {
   const { league } = req.params; // Extracting league from the URL parameters
   try {
-    const matchdayData = await fetchCurrentMatchday(league); // Passing the league parameter to the function
+    const matchdayData = await getMatches(league); // Passing the league parameter to the function
     res.json(matchdayData);
   } catch (error) {
     res
@@ -38,6 +39,19 @@ app.get("/matchday/:league", async (req, res) => {
       .send(
         `Fehler beim Abrufen des aktuellen Spieltags für die Liga ${league}.`
       );
+  }
+});
+
+// Endpunkt zum Abrufen der Spieltagsdaten einer bestimmten Liga
+app.get("/matchday/:league", async (req, res) => {
+  const { league } = req.params; // Extrahieren der Liga aus den URL-Parametern
+  try {
+    const matchdayData = await getMatchDays(league); // Nutzung der zuvor erstellten Funktion
+    res.json(matchdayData);
+  } catch (error) {
+    res
+      .status(500)
+      .send(`Fehler beim Abrufen der Spieltagsdaten für die Liga ${league}.`);
   }
 });
 
