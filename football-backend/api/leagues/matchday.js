@@ -1,9 +1,9 @@
 import axios from "axios";
 import cheerio from "cheerio";
-import urls from "../../url/url.js";
+import dataUrl from "../../url/data.js";
 
 const scrapeMatchday = async (league) => {
-  const url = urls.matchdays[league];
+  const url = dataUrl.matchdays[league];
   console.log(url, league);
 
   try {
@@ -35,12 +35,12 @@ const scrapeMatchday = async (league) => {
             .first()
             .text()
             .trim();
-          const homeTeamLogo = $(matchDiv)
+          let homeTeamLogo = $(matchDiv)
             .find(
               'div[data-testid="team-match-score-atom-container-team-home-content-box"] picture img'
             )
             .attr("src");
-          const awayTeamLogo = $(matchDiv)
+          let awayTeamLogo = $(matchDiv)
             .find(
               'div[data-testid="team-match-score-atom-container-team-away-content-box"] picture img'
             )
@@ -64,6 +64,9 @@ const scrapeMatchday = async (league) => {
               .find('span[data-testid="atom-match-card-content-info"]')
               .text()
               .trim() || "Not available";
+
+          homeTeamLogo = homeTeamLogo.replace(/30x0/, "100x0");
+          awayTeamLogo = awayTeamLogo.replace(/30x0/, "100x0");
 
           // Check if the match has been played by checking if both scores are present
           const played =
