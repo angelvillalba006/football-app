@@ -1,4 +1,4 @@
-const urls = {
+const dataUrl = {
   matchdays: {
     premierleague:
       "https://www.eurosport.de/fussball/premier-league/zeitplan-kalender-ergebnisse.shtml",
@@ -11,4 +11,4 @@ const urls = {
   },
 };
 
-export default urls;
+export default dataUrl;
