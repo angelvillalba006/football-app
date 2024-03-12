@@ -3,6 +3,7 @@ import { View, StyleSheet, Text } from "react-native";
 import SectionTitle from "../../atoms/shared/SectionTitle";
 import NextMatchCard from "../../molecules/matches/NextMatchesCard";
 import MatchdayService from "../../../services/matches";
+import FetchError from "../../molecules/shared/FetchError";
 
 const NextMatchesList = () => {
   const [matches, setMatches] = useState([]);
@@ -40,7 +41,7 @@ const NextMatchesList = () => {
           />
         ))
       ) : (
-        <Text>No upcoming matches found.</Text>
+        <FetchError message="Data Fetch failed" />
       )}
     </View>
   );
