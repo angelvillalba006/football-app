@@ -2,12 +2,12 @@ import { View, Image } from "react-native";
 
 interface ClubLogoProps {
   size: number;
-  source: any;
+  uri: string;
 }
 
-const ClubLogo = ({ size, source }: ClubLogoProps) => (
+const ClubLogo = ({ size, uri }: ClubLogoProps) => (
   <View>
-    <Image source={source} style={{ width: size, height: size }} />
+    <Image source={{ uri }} style={{ width: size, height: size }} />
   </View>
 );
 

@@ -9,11 +9,11 @@ interface NextMatchesCardProps {
   time: string;
   homeTeam: {
     name: string;
-    logo: ImageSourcePropType;
+    logo: string;
   };
   awayTeam: {
     name: string;
-    logo: ImageSourcePropType;
+    logo: string;
   };
 }
 
@@ -29,13 +29,13 @@ const NextMatchesCard = ({
         <View style={styles.rowContainer}>
           <View style={styles.homeTeam}>
             <ClubName name={homeTeam.name} />
-            <ClubLogo size={40} source={homeTeam.logo} />
+            <ClubLogo size={35} uri={homeTeam.logo} />
           </View>
           <View style={styles.matchDateContainer}>
             <MatchDate date={date} time={time} />
           </View>
           <View style={styles.awayTeam}>
-            <ClubLogo size={40} source={awayTeam.logo} />
+            <ClubLogo size={35} uri={awayTeam.logo} />
             <ClubName name={awayTeam.name} />
           </View>
         </View>
@@ -53,7 +53,6 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     width: "100%",
     alignSelf: "center",
-    //justifyContent: "center",
     height: 80,
     marginLeft: 25,
     marginTop: 15,
