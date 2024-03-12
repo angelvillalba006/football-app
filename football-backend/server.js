@@ -25,13 +25,19 @@ app.get("/", (req, res) => {
   res.json(routes);
 });
 
-// Endpoint for fetching the next matches of a league
-app.get("/matchday", async (req, res) => {
+// Endpoint for fetching the current matchday of a specific league
+// Now expects a league parameter in the URL
+app.get("/matchday/:league", async (req, res) => {
+  const { league } = req.params; // Extracting league from the URL parameters
   try {
-    const matchdayNumber = await fetchCurrentMatchday();
-    res.json({ matchday: matchdayNumber });
+    const matchdayData = await fetchCurrentMatchday(league); // Passing the league parameter to the function
+    res.json(matchdayData);
   } catch (error) {
-    res.status(500).send("Fehler beim Abrufen des aktuellen Spieltags.");
+    res
+      .status(500)
+      .send(
+        `Fehler beim Abrufen des aktuellen Spieltags für die Liga ${league}.`
+      );
   }
 });
 

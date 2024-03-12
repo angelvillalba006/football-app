@@ -1,10 +1,11 @@
 import axios from "axios";
 import cheerio from "cheerio";
+import urls from "../../url/url.js";
 
-const url =
-  "https://www.eurosport.de/fussball/premier-league/zeitplan-kalender-ergebnisse.shtml";
+const scrapeMatchday = async (league) => {
+  const url = urls.matchdays[league];
+  console.log(url, league);
 
-const scrapeMatchday = async () => {
   try {
     const response = await axios.get(url);
     const html = response.data;
@@ -88,8 +89,8 @@ const scrapeMatchday = async () => {
         });
     });
     return matchesData;
-  } catch (message) {
-    console.error(message);
+  } catch (error) {
+    console.error(error);
   }
 };
 
