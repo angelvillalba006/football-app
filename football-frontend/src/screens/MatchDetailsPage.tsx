@@ -1,6 +1,7 @@
 import React from "react";
 import { View, StyleSheet, ScrollView } from "react-native";
 import PageHeader from "../components/molecules/matchDetails/PageHeader";
+import MatchStatsCard from "../components/molecules/matchDetails/MatchStatsCard";
 
 const MatchDetailsPage = () => {
   const avatarUrl = {
@@ -14,6 +15,7 @@ const MatchDetailsPage = () => {
         avatarSource={avatarUrl.uri}
         pageTitle="Matches"
       />
+      <MatchStatsCard />
     </View>
   );
 };

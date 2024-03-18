@@ -1,10 +1,11 @@
 import React from "react";
-import { View, StyleSheet, ImageSourcePropType } from "react-native";
+import { View, StyleSheet, TouchableOpacity } from "react-native";
 import CardBackground from "../../atoms/matches/CardBackground";
 import Matchday from "../../atoms/matches/Matchday";
 import LeagueName from "../../atoms/matches/LeagueName";
 import GameResult from "../../atoms/matches/GameResult";
 import Team from "./Team";
+import { useNavigation } from "@react-navigation/core";
 
 interface LiveMatchesCardProps {
   matchday: number;
@@ -35,40 +36,47 @@ const LiveMatchCard = ({
   cardStyle,
   marginLeft = 15,
 }: LiveMatchesCardProps) => {
+  const navigation = useNavigation() as any;
   const textColor = cardStyle === "detailsPage" ? "black" : undefined;
   const backgroundColor = cardStyle === "detailsPage" ? "white" : "#38043c";
   const showCardBackground = cardStyle === "listItem";
 
+  const handlePress = () => {
+    navigation.navigate("MatchDetails");
+  };
+
   return (
-    <View style={[styles.card, { backgroundColor, marginLeft }]}>
-      {showCardBackground && <CardBackground />}
+    <TouchableOpacity onPress={handlePress}>
+      <View style={[styles.card, { backgroundColor, marginLeft }]}>
+        {showCardBackground && <CardBackground />}
 
-      <View style={styles.overlay}>
-        <Matchday matchday={matchday} textColor={textColor} />
-        <LeagueName league={leagueName} textColor={textColor} />
+        <View style={styles.overlay}>
+          <Matchday matchday={matchday} textColor={textColor} />
+          <LeagueName league={leagueName} textColor={textColor} />
 
-        <View style={styles.gameDetails}>
-          <Team
-            textColor={textColor}
-            name={homeTeam.name}
-            source={homeTeam.logo}
-            type={homeTeam.type}
-          />
-          <GameResult
-            textColor={textColor}
-            hometeam={homeTeam.score}
-            awayteam={awayTeam.score}
-            minutesPlayed={minutesPlayed}
-          />
-          <Team
-            textColor={textColor}
-            name={awayTeam.name}
-            source={awayTeam.logo}
-            type={awayTeam.type}
-          />
+          <View style={styles.gameDetails}>
+            <Team
+              textColor={textColor}
+              name={homeTeam.name}
+              source={homeTeam.logo}
+              type={homeTeam.type}
+            />
+            <GameResult
+              textColor={textColor}
+              hometeam={homeTeam.score}
+              awayteam={awayTeam.score}
+              minutesPlayed={minutesPlayed}
+            />
+            <Team
+              textColor={textColor}
+              name={awayTeam.name}
+              source={awayTeam.logo}
+              type={awayTeam.type}
+            />
+          </View>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

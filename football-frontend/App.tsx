@@ -10,6 +10,7 @@ import NavBar from "./src/navigation/NavBar";
 import ExamplePage from "./src/screens/ExamplePage";
 import Onboarding from "./src/screens/OnboardingPage";
 import MatchesPage from "./src/screens/MatchesPage";
+import MatchDetailsPage from "./src/screens/MatchDetailsPage";
 
 const Stack = createStackNavigator();
 
@@ -71,6 +72,7 @@ export default function App() {
               <Stack.Screen name="Onboarding" component={Onboarding} />
               <Stack.Screen name="Navigation" component={NavBar} />
               <Stack.Screen name="Matches" component={MatchesPage} />
+              <Stack.Screen name="MatchDetails" component={MatchDetailsPage} />
               <Stack.Screen name="Example" component={ExamplePage} />
             </Stack.Navigator>
           )}
