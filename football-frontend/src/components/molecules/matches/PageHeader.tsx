@@ -20,7 +20,7 @@ const PageHeader = ({
         <PageTitle title={pageTitle} />
       </View>
       <View style={styles.avatarContainer}>
-        <ProfileAvatar size={avatarSize} source={avatarSource} />
+        <ProfileAvatar size={avatarSize} uri={avatarSource} />
       </View>
     </View>
   );

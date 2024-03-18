@@ -3,12 +3,12 @@ import { Avatar } from "react-native-paper";
 
 interface ProfileAvatarProps {
   size: number;
-  source: any;
+  uri: string;
 }
 
-const ProfileAvatar = ({ size, source }: ProfileAvatarProps) => (
+const ProfileAvatar = ({ size, uri }: ProfileAvatarProps) => (
   <View>
-    <Avatar.Image size={size} source={source} />
+    <Avatar.Image size={size} source={{ uri }} />
   </View>
 );
 

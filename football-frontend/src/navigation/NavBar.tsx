@@ -1,8 +1,9 @@
 import * as React from "react";
 import { BottomNavigation } from "react-native-paper";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, View } from "react-native";
 import NavigationContext from "../services/navigationContext";
 import ExamplePage from "../screens/ExamplePage";
+import MatchDetailsPage from "../screens/MatchDetailsPage";
 import MatchesPage from "../screens/MatchesPage";
 
 const NavBar = () => {
@@ -25,7 +26,7 @@ const NavBar = () => {
   // Define the renderScene function to map the routes to their respective components
   const renderScene = BottomNavigation.SceneMap({
     matches: MatchesPage,
-    example2: ExamplePage,
+    example2: MatchDetailsPage,
     example3: ExamplePage,
   });
 
