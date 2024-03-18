@@ -4,12 +4,16 @@ import { Text } from "react-native-paper";
 
 interface MatchdayProps {
   matchday: number;
+  textColor?: string;
 }
 
-const Matchday = ({ matchday }: MatchdayProps) => {
+const Matchday = ({ matchday, textColor = "white" }: MatchdayProps) => {
   return (
     <View>
-      <Text variant="titleMedium" style={styles.matchday}>
+      <Text
+        variant="titleMedium"
+        style={[styles.matchday, { color: textColor }]}
+      >
         Matchday {matchday}
       </Text>
     </View>
@@ -21,7 +25,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontWeight: "600",
     fontSize: 14,
-    color: "white",
     marginTop: 8,
   },
 });

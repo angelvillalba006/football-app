@@ -11,13 +11,47 @@ const LiveMatches = () => {
       minutesPlayed: "45+2",
       homeTeam: {
         name: "Newcastle",
-        logo: require("../../../../assets/logos/clubs/premierleague/newcastle.png"),
+        logo: "https://imgresizer.eurosport.com/unsafe/0x100/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4087.png",
         type: "Home",
         score: 2,
       },
       awayTeam: {
         name: "Man City",
-        logo: require("../../../../assets/logos/clubs/premierleague/manchestercity.png"),
+        logo: "https://imgresizer.eurosport.com/unsafe/0x100/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4222.png",
+        type: "Away",
+        score: 1,
+      },
+    },
+    {
+      matchday: 27,
+      leagueName: "Premier League",
+      minutesPlayed: "45+2",
+      homeTeam: {
+        name: "Newcastle",
+        logo: "https://imgresizer.eurosport.com/unsafe/0x100/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4087.png",
+        type: "Home",
+        score: 2,
+      },
+      awayTeam: {
+        name: "Man City",
+        logo: "https://imgresizer.eurosport.com/unsafe/0x100/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4222.png",
+        type: "Away",
+        score: 1,
+      },
+    },
+    {
+      matchday: 27,
+      leagueName: "Premier League",
+      minutesPlayed: "45+2",
+      homeTeam: {
+        name: "Newcastle",
+        logo: "https://imgresizer.eurosport.com/unsafe/0x100/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4087.png",
+        type: "Home",
+        score: 2,
+      },
+      awayTeam: {
+        name: "Man City",
+        logo: "https://imgresizer.eurosport.com/unsafe/0x100/filters:format(png)/images.sports.gracenote.com/images/lib/basic/sport/football/club/logo/300/4222.png",
         type: "Away",
         score: 1,
       },
@@ -34,6 +68,7 @@ const LiveMatches = () => {
       >
         {liveMatches.map((match, index) => (
           <LiveMatchCard
+            cardStyle="listItem"
             key={index}
             matchday={match.matchday}
             leagueName={match.leagueName}

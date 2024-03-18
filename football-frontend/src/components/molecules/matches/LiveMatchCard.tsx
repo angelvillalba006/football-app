@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  View,
-  StyleSheet,
-  ScrollView,
-  ImageSourcePropType,
-} from "react-native";
+import { View, StyleSheet, ImageSourcePropType } from "react-native";
 import CardBackground from "../../atoms/matches/CardBackground";
 import Matchday from "../../atoms/matches/Matchday";
 import LeagueName from "../../atoms/matches/LeagueName";
@@ -17,16 +12,18 @@ interface LiveMatchesCardProps {
   minutesPlayed: string;
   homeTeam: {
     name: string;
-    logo: ImageSourcePropType;
+    logo: string;
     type: "Home" | "Away";
     score: number;
   };
   awayTeam: {
     name: string;
-    logo: ImageSourcePropType;
+    logo: string;
     type: "Home" | "Away";
     score: number;
   };
+  cardStyle: "listItem" | "detailsPage";
+  marginLeft?: number;
 }
 
 const LiveMatchCard = ({
@@ -35,27 +32,36 @@ const LiveMatchCard = ({
   homeTeam,
   awayTeam,
   minutesPlayed,
+  cardStyle,
+  marginLeft = 15,
 }: LiveMatchesCardProps) => {
+  const textColor = cardStyle === "detailsPage" ? "black" : undefined;
+  const backgroundColor = cardStyle === "detailsPage" ? "white" : "#38043c";
+  const showCardBackground = cardStyle === "listItem";
+
   return (
-    <View style={styles.card}>
-      <CardBackground />
+    <View style={[styles.card, { backgroundColor, marginLeft }]}>
+      {showCardBackground && <CardBackground />}
 
       <View style={styles.overlay}>
-        <Matchday matchday={matchday} />
-        <LeagueName league={leagueName} />
+        <Matchday matchday={matchday} textColor={textColor} />
+        <LeagueName league={leagueName} textColor={textColor} />
 
         <View style={styles.gameDetails}>
           <Team
+            textColor={textColor}
             name={homeTeam.name}
             source={homeTeam.logo}
             type={homeTeam.type}
           />
           <GameResult
+            textColor={textColor}
             hometeam={homeTeam.score}
             awayteam={awayTeam.score}
             minutesPlayed={minutesPlayed}
           />
           <Team
+            textColor={textColor}
             name={awayTeam.name}
             source={awayTeam.logo}
             type={awayTeam.type}
@@ -68,10 +74,8 @@ const LiveMatchCard = ({
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: "#38043c",
-    width: 300,
+    width: 350,
     height: 200,
-    marginLeft: 15,
     marginTop: 15,
     borderRadius: 20,
     overflow: "hidden",

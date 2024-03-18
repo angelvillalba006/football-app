@@ -4,15 +4,16 @@ import { Text } from "react-native-paper";
 
 interface TeamProps {
   name: string;
-  source: any;
+  source: string;
   type?: "Home" | "Away";
+  textColor?: string;
 }
 
-const Team = ({ name, source, type }: TeamProps) => (
+const Team = ({ name, source, type, textColor = "white" }: TeamProps) => (
   <View style={styles.container}>
-    <ClubLogo size={60} source={source} />
-    <Text style={styles.name}>{name}</Text>
-    <Text style={styles.type}>{type}</Text>
+    <ClubLogo size={60} uri={source} />
+    <Text style={[styles.name, { color: textColor }]}>{name}</Text>
+    <Text style={[styles.type, { color: textColor }]}>{type}</Text>
   </View>
 );
 
@@ -24,14 +25,12 @@ const styles = StyleSheet.create({
     width: 100,
   },
   name: {
-    color: "white",
     fontWeight: "600",
     fontSize: 16,
     marginTop: 8,
     textAlign: "center",
   },
   type: {
-    color: "white",
     opacity: 0.6,
     fontSize: 14,
     marginTop: 4,

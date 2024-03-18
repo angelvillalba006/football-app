@@ -4,12 +4,13 @@ import { Text } from "react-native-paper";
 
 interface LeagueProps {
   league: string;
+  textColor?: string;
 }
 
-const LeagueName = ({ league }: LeagueProps) => {
+const LeagueName = ({ league, textColor = "white" }: LeagueProps) => {
   return (
     <View>
-      <Text variant="titleMedium" style={styles.league}>
+      <Text variant="titleMedium" style={[styles.league, { color: textColor }]}>
         {league}
       </Text>
     </View>
@@ -21,7 +22,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 12,
     opacity: 0.6,
-    color: "white",
     marginTop: -2,
   },
 });

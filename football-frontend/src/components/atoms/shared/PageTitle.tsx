@@ -4,12 +4,13 @@ import { Text } from "react-native-paper";
 
 interface PageTitleProps {
   title: string;
+  color?: string;
 }
 
-const PageTitle = ({ title }: PageTitleProps) => {
+const PageTitle = ({ title, color = "black" }: PageTitleProps) => {
   return (
     <View>
-      <Text variant="headlineSmall" style={styles.title}>
+      <Text variant="headlineSmall" style={[styles.title, { color }]}>
         {title}
       </Text>
     </View>

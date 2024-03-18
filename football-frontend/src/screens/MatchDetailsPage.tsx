@@ -1,9 +1,6 @@
 import React from "react";
 import { View, StyleSheet, ScrollView } from "react-native";
-import PageHeader from "../components/molecules/matches/PageHeader";
-import Leagues from "../components/molecules/matches/Leagues";
-import LiveMatches from "../components/organisms/matches/LiveMatches";
-import NextMatches from "../components/organisms/matches/NextMatchesList";
+import PageHeader from "../components/molecules/matchDetails/PageHeader";
 
 const MatchDetailsPage = () => {
   const avatarUrl = {
@@ -17,12 +14,6 @@ const MatchDetailsPage = () => {
         avatarSource={avatarUrl.uri}
         pageTitle="Matches"
       />
-
-      <ScrollView showsVerticalScrollIndicator={false}>
-        <Leagues />
-        <LiveMatches />
-        <NextMatches />
-      </ScrollView>
     </View>
   );
 };

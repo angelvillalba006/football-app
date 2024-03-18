@@ -6,16 +6,27 @@ interface ResultProps {
   hometeam: number;
   awayteam: number;
   minutesPlayed: string;
+  textColor?: string;
 }
 
-const GameResult = ({ hometeam, awayteam, minutesPlayed }: ResultProps) => {
+const GameResult = ({
+  hometeam,
+  awayteam,
+  minutesPlayed,
+  textColor = "white",
+}: ResultProps) => {
   return (
     <View>
-      <Text variant="displaySmall" style={styles.result}>
+      <Text
+        variant="displaySmall"
+        style={[styles.result, { color: textColor }]}
+      >
         {hometeam} : {awayteam}
       </Text>
       <View style={styles.minutesBox}>
-        <Text style={styles.minutesText}>{minutesPlayed}′</Text>
+        <Text style={[styles.minutesText, { color: textColor }]}>
+          {minutesPlayed}′
+        </Text>
       </View>
     </View>
   );
@@ -24,7 +35,6 @@ const GameResult = ({ hometeam, awayteam, minutesPlayed }: ResultProps) => {
 const styles = StyleSheet.create({
   result: {
     fontWeight: "bold",
-    color: "white",
   },
   minutesBox: {
     backgroundColor: "rgba(255, 255, 255, 0.1)",
@@ -40,7 +50,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontWeight: "600",
     fontSize: 12,
-    color: "white",
   },
 });
 
